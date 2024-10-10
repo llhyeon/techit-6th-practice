@@ -6,6 +6,10 @@
   font-family: "Pretendard Variable", Pretendard, sans-serif;
 }
 
+body a {
+  text-decoration: none;
+}
+
 :root {
   --dark-blue: #24388d;
 }
@@ -28,7 +32,6 @@
 
       a {
         color: #24388d;
-        text-decoration: none;
         text-shadow: 1px 1px 1px currentColor;
         font-size: 15px;
       }
