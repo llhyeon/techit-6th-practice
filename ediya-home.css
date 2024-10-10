@@ -1,0 +1,34 @@
+@import "./common/a11y.css";
+
+.ediya__menu-wrapper {
+  text-align: center;
+  background-image: linear-gradient(to bottom, #bae5fb 50%, #fefefe 50%);
+}
+
+.ediya__menu {
+  h2 {
+    font-weight: 100;
+    color: #14182c;
+
+    ::after {
+      content: "";
+      display: block;
+      inline-size: 40px;
+      block-size: 0.5px;
+      margin: 30px auto;
+      background-color: #14182c;
+    }
+
+    strong {
+      color: #24388d;
+    }
+
+    p {
+      color: #14182c;
+    }
+  }
+
+  a {
+    border: 1px solid #24388d;
+  }
+}
