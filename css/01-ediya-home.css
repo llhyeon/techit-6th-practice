@@ -1,5 +1,103 @@
 @import "../common/base.css";
 
+:root {
+  --container-width: 788px;
+  --logo-light: url("../assets/ediya/logo.svg");
+  --primary-color: #24388d;
+  --secondary-color: #bae5fb;
+  --dark-gray: #14182c;
+  --text-color: var(--dark-gray);
+}
+
 body {
-  font-family: "Pretendard Variable", Pretendard, sans-serif;
+  font-family: "Spoqa Han Sans", sans-serif;
+  font-weight: 400;
+
+  /* 로고 */
+  .logo {
+    a {
+      display: block;
+      block-size: inherit;
+    }
+    &.default {
+      inline-size: 140px;
+      block-size: 14px;
+    }
+    &.light {
+      background: var(--logo-light);
+    }
+  }
+
+  /* 텍스트 메뉴 */
+  .text-menu {
+    font-size: 0.9375rem;
+    line-height: 1.4666666666666666;
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+
+  /* 레이아웃 공통 */
+  .inner {
+    inline-size: var(--container-width);
+    margin-inline: auto;
+  }
+
+  /* header */
+  .header {
+    & > .inner {
+      display: flex;
+      align-items: center;
+      padding-block: 14px;
+    }
+    .gnb {
+      margin-inline-start: auto;
+      display: flex;
+      gap: 8px;
+      float: inline-end;
+    }
+  }
+  .main-contents {
+    section.banner {
+      .banner-top {
+        min-block-size: 260px;
+        padding-block-start: 50px;
+        padding-block-end: 36px;
+        background-color: var(--secondary-color);
+        text-align: center;
+      }
+      .catchphrase {
+        letter-spacing: -0.04em;
+        color: var(--text-color);
+
+        p:not(.description) {
+          font-size: 1.9375rem;
+          font-weight: 100;
+          line-height: 1.1;
+        }
+        .description {
+          font-size: 0.875rem;
+        }
+        strong {
+          font-weight: 700;
+          color: var(--primary-color);
+        }
+      }
+      .product {
+        position: relative;
+
+        .menu-item {
+          position: absolute;
+
+          &.cheese-shake {
+            inset-block-start: -212px;
+            inset-inline-start: -54px;
+          }
+          &.choco-n-rice-shake {
+            inset-block-start: -81px;
+            inset-inline-end: -171px;
+          }
+        }
+      }
+    }
+  }
 }
