@@ -1,0 +1,45 @@
+@import "../common/sronly.css";
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
+}
+
+body a {
+  text-decoration: none;
+}
+
+:root {
+  --dark-blue: #24388d;
+}
+
+.ediya-header {
+  inline-size: 100vw;
+  padding: 10px 350px;
+
+  .ediya-header__logo {
+    float: left;
+  }
+
+  .ediya-header__nav {
+    list-style: "";
+    float: right;
+
+    li {
+      float: left;
+      margin-inline-end: 8px;
+
+      a {
+        color: #24388d;
+        text-shadow: 1px 1px 1px currentColor;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.main-menu {
+  inline-size: 100vw;
+  block-size: 505px;
+}
