@@ -1,0 +1,29 @@
+@import "../common/reset.css|";
+
+html,
+body {
+  block-size: 100vh;
+}
+
+#wrap {
+  block-size: 100%;
+  background: yellow;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.header {
+  background: salmon;
+  flex-grow: 1;
+}
+
+.tablist {
+  background: sandybrown;
+  flex-grow: 1;
+}
+
+.content {
+  flex-grow: 5;
+  display: flex;
+  flex-flow: row nowrap;
+}
