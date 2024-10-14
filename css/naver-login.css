@@ -1,0 +1,113 @@
+@import "../common/reset.css";
+@import "../common/a11y.css";
+
+:root {
+  --green: #03cf5d;
+  --white: #fff;
+  --dark-gray: #333;
+}
+
+body {
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
+  margin: 50px;
+}
+
+.brand {
+  a,
+  svg {
+    display: block;
+  }
+}
+
+.user-input {
+  .user-input__input {
+    block-size: 3rem;
+    padding: 0.875rem;
+    inline-size: 100%;
+    border-radius: 2px;
+
+    &:user-invalid + .user-input__err span {
+      visibility: visible;
+    }
+
+    &:focus {
+      background: #e9f0fd;
+    }
+  }
+
+  .user-input__err {
+    color: red;
+    font-size: 0.75rem;
+    margin-block-start: 0.4375rem;
+  }
+
+  .user-input__err__msg {
+    visibility: hidden;
+  }
+}
+
+.btn {
+  border: 0;
+  padding: 0;
+  background: #03cf5d;
+  color: white;
+}
+
+.checkbox {
+  --color-green: var(--green);
+  --color-white: var(--white);
+
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+
+  .checkbox__input {
+    position: absolute;
+    block-size: 1.5rem;
+    inline-size: 1.5rem;
+    appearance: none;
+
+    &:checked + .checkbox__label .svg-bg {
+      fill: var(--color, #03cf5d);
+    }
+
+    &:checked + .checkbox__label :is(.svg-border, .svg-mark) {
+      fill: var(--color-white, #fff);
+    }
+  }
+}
+
+.link {
+  --link-color: var(--dark-gray);
+  text-decoration: none;
+  color: var(--link-color);
+  font-size: 0.875rem;
+}
+
+.switch {
+  --font-color: var(--green);
+  position: relative;
+
+  .switch__label {
+    display: block;
+    inline-size: 2rem;
+    text-align: end;
+
+    &::after {
+      content: "OFF";
+    }
+  }
+
+  .switch__input:checked + .switch__label::after {
+    content: "ON";
+    color: var(--font-color);
+  }
+
+  .switch__input {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inline-size: 1.25rem;
+    appearance: none;
+  }
+}
