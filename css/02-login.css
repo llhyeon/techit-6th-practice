@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  /* inline size */
+  --inline-size-base: 50rem;
+
+  /* contents size */
+  --contents-size-base: var(--inline-size-base);
+
+  /* round */
+  --round-md: 1.5625rem;
+
+  /* color */
+  --white: #fff;
+  --gray01: rgba(239, 243, 255, 1);
+
+  --bg-color-01: var(--gray01);
+
+  /* font */
+  --font-size-lg: 1.875rem;
+
+  /* title */
+  --title-font-size: var(--font-size-lg, 2rem);
+}
+
+*,
+*::before,
+&::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+
+  &:has(.sign-up) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    block-size: 100dvh;
+    background: var(--bg-color-01);
+  }
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+/* logo */
+.brand {
+  display: flex;
+  align-items: center;
+
+  svg {
+    width: 1.875rem;
+    margin-inline-end: 0.5rem;
+  }
+  .brand-txt {
+    font-size: var(--title-font-size);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+}
+
+.round-box {
+  max-width: var(--contents-size-base);
+  margin-inline: auto;
+  border-radius: var(--round-md);
+  box-shadow: 2.72px 3.62px 39.2px 0px rgba(0, 0, 0, 0.12);
+}
+
+/* layout */
+.sign-up {
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 3.5rem;
+  padding: 1.5rem 4rem;
+  background: var(--white);
+
+  .brand {
+    flex-basis: 100%;
+    justify-content: end;
+  }
+  .sign-up-banner {
+  }
+  main {
+    flex: 1;
+  }
+}

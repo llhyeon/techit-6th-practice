@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up</title>
+    <link rel="stylesheet" href="../css/02-login.css" />
+  </head>
+  <body>
+    <div class="sign-up round-box">
+      <h1 class="brand">
+        <svg aria-hidden="" viewBox="0 0 10 12">
+          <use href="./../assets/login/sprite/_sprite.svg#logo" />
+        </svg>
+        <span class="brand-txt">Your Logo</span>
+      </h1>
+      <figure class="sign-up-banner">
+        <img src="./../assets/login/@dummy_banner.png" alt="" />
+      </figure>
+      <main>
+        <hgroup>
+          <h2 class="page-title">Sign up</h2>
+          <p>Let’s get you all st up so you can access your personal account.</p>
+        </hgroup>
+        <form action="form-wrap">
+          <div class="input-box">
+            <label for="">First Name</label>
+            <input type="email" />
+          </div>
+          <div class="input-box">
+            <label for="">First Name</label>
+            <input type="email" />
+          </div>
+          <div class="masking-toggle-switch">
+            <input type="checkbox" />
+            <label for="">
+              <span class="is-masking">비밀번호 마스킹</span>
+              <span class="">비밀번호 마스킹 안함</span>
+            </label>
+          </div>
+          <div class="check-box">
+            <input type="checkbox" id="check-item-01" />
+            <label for="check-item-01">I agree to all the <strong class="color-01">Terms</strong> and <strong class="color-01">Privacy Policies</strong></label>
+          </div>
+          <button type="submit">Create account</button>
+        </form>
+        <div class="login">
+          <h2>
+            <div class="sr-only">login</div>
+          </h2>
+          <p class="txt">Already have an account? <a href="#" class="link-txt color-01">Login</a></p>
+        </div>
+        <div class="sign-up-account">
+          <p class="sign-up-account__title">Or Sign up with</p>
+          <ul class="btn-list">
+            <li class="btn-list__item">
+              <a href="#" target="_blank">
+                <svg aria-hidden="" width="18" viewBox="0 0 10 12" role="" aria-label="facebook 계정으로 가입">
+                  <use href="./../assets/login/sprite/_sprite.svg#facebook" />
+                </svg>
+              </a>
+            </li>
+            <li class="btn-list__item">
+              <a href="#" target="_blank">
+                <svg aria-hidden="" width="18" viewBox="0 0 10 12" role="" aria-label="google 계정으로 가입">
+                  <use href="./../assets/login/sprite/_sprite.svg#google" />
+                </svg>
+              </a>
+            </li>
+            <li class="btn-list__item">
+              <a href="#" target="_blank">
+                <svg aria-hidden="" width="18" viewBox="0 0 10 12" role="" aria-label="apple 계정으로 가입">
+                  <use href="./../assets/login/sprite/_sprite.svg#apple" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
