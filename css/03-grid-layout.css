@@ -1,0 +1,33 @@
+@import "../common/reset.css";
+
+.grid-container {
+  inline-size: 100%;
+  margin-inline: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(3rem, auto));
+  gap: 1.5rem;
+
+  .img-figure {
+    max-inline-size: 640px;
+    padding: 10px;
+    position: relative;
+    border: 1px solid black;
+    inline-size: 100%;
+
+    img {
+      display: block;
+      inline-size: 100%;
+      block-size: 100%;
+      object-fit: cover;
+    }
+  }
+
+  figcaption {
+    text-align: center;
+    color: wheat;
+    position: absolute;
+    inset-inline: 10px;
+    inset-block-start: 10px;
+    backdrop-filter: blur(5px);
+  }
+}
