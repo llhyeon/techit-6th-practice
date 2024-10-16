@@ -7,17 +7,26 @@
   /* contents size */
   --contents-size-base: var(--inline-size-base);
 
+  /* gap */
+  --gap-size-sm: 0.5rem;
+  --gap-size-base: 0.75rem;
+
   /* round */
   --round-md: 1.5625rem;
 
   /* color */
   --white: #fff;
-  --gray01: rgba(239, 243, 255, 1);
+  --gray01: #eff3ff;
+  --deep-gray02: #313131;
+  --blue: #3869eb;
+  --primary-color: var(--blue, #3869eb);
 
-  --bg-color-01: var(--gray01);
+  --bg-color-01: var(--gray01, #eff3ff);
 
   /* font */
   --font-size-lg: 1.875rem;
+
+  --text-color-base: var(--deep-gray02, #313131);
 
   /* title */
   --title-font-size: var(--font-size-lg, 2rem);
@@ -32,6 +41,7 @@
 
 body {
   font-family: "Red Hat Display", sans-serif;
+  color: var(--text-color-base);
 
   &:has(.sign-up) {
     display: flex;
@@ -71,6 +81,9 @@ img {
   svg {
     width: 1.875rem;
     margin-inline-end: 0.5rem;
+    use {
+      fill: var(--primary-color);
+    }
   }
   .brand-txt {
     font-size: var(--title-font-size);
@@ -84,6 +97,11 @@ img {
   margin-inline: auto;
   border-radius: var(--round-md);
   box-shadow: 2.72px 3.62px 39.2px 0px rgba(0, 0, 0, 0.12);
+}
+
+/* title */
+.page-title {
+  font-size: var(--title-font-size);
 }
 
 /* layout */
@@ -102,5 +120,15 @@ img {
   }
   main {
     flex: 1;
+
+    .page-title {
+      padding-block-start: 3.5rem;
+      & + p {
+        margin-block-start: var(--gap-size-sm);
+      }
+    }
+
+    .form-wrap {
+    }
   }
 }
