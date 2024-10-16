@@ -5,7 +5,9 @@
   --logo-light: url("../assets/ediya/logo.svg");
   --primary-color: #24388d;
   --secondary-color: #bae5fb;
+  --snow: #F5F5F5;
   --dark-gray: #14182c;
+  --grayscale-black: #0F0F0F;
   --text-color: var(--dark-gray);
 }
 
@@ -37,28 +39,42 @@ body {
   }
 
   /* 레이아웃 공통 */
-  .inner {
-    inline-size: var(--container-width);
-    margin-inline: auto;
+  .ediya-wrap {
+    display: grid;
+    grid-template-columns: auto repeat(12, 43px) auto;
+    column-gap: 16px;
   }
 
   /* header */
   .header {
-    & > .inner {
-      display: flex;
-      align-items: center;
-      padding-block: 14px;
+    display: grid;
+    grid-column: 2 / -2;
+    grid-template-columns: subgrid;
+    align-items: center;
+    padding-block: 14px;
+
+    .logo {
+      grid-column: span 3;
     }
     .gnb {
-      margin-inline-start: auto;
+      grid-column: 4 / -1;
       display: flex;
+      margin-inline-start: auto;
       gap: 8px;
-      float: inline-end;
     }
   }
   .main-contents {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: subgrid;
+
     section.banner {
+      display: grid;
+      grid-column: 1 / -1;
+      grid-template-columns: subgrid;
+
       .banner-top {
+        grid-column: 1 / -1;
         min-block-size: 260px;
         padding-block-start: 50px;
         padding-block-end: 36px;
@@ -83,7 +99,9 @@ body {
         }
       }
       .product {
+        grid-column: 2 / -2;
         position: relative;
+        min-block-size: 260px;
 
         .menu-item {
           position: absolute;
@@ -93,11 +111,22 @@ body {
             inset-inline-start: -54px;
           }
           &.choco-n-rice-shake {
-            inset-block-start: -81px;
+            inset-block-start: -129px;
             inset-inline-end: -171px;
           }
         }
       }
     }
+    section.board {
+      grid-column: 1 / -1;
+      min-block-size: 330px;
+      padding-block: 62px;
+      background: var(--snow);
+    }
+  }
+  .content-info {
+    grid-column: 1 / -1;
+    min-block-size: 238px;
+    background-color: var(--grayscale-black);
   }
 }
