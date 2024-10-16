@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>focus</title>
+    <link rel="stylesheet" href="https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" crossorigin="anonymous" />
+    <style>
+      * {
+        font-family: "Spoqa Han Sans", sans-serif;
+        color: #222;
+        box-sizing: border-box;
+      }
+
+      h2 {
+        margin-block-start: 0;
+      }
+
+      form {
+        display: block;
+        padding-block: 1rem;
+      }
+
+      input {
+        margin: 0;
+        border: 1px solid #ddd;
+
+        &[type="text"] {
+          display: block;
+          inline-size: 100%;
+          margin-block-end: 1rem;
+          padding: .5rem 1rem;
+          font-size: 100%;
+          line-height: 1.2;
+          border-radius: 0;
+          appearance: none;
+        }
+
+        &[type="checkbox"] {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      button {
+        display: block;
+        inline-size: 100%;
+        margin-block: 1rem;
+        padding: 1rem;
+        border-width: 0;
+        background-color: #6295D9;
+        font-size: 100%;
+        color: #fff;
+      }
+
+      .wrap {
+        max-inline-size: 25rem;
+        margin-inline: auto;
+      }
+
+      .focus-visible {
+        :is(input, button, a):focus-within {
+          outline: 2px dashed #e99d56;
+          outline-offset: 2px;
+        }
+      }
+
+      .focus-within {
+        padding: 1rem 2rem;
+        border-radius: 12px;
+        transition: box-shadow .4s;
+
+        &:focus-within {
+          box-shadow: 0 0 16px rgba(0 0 0 / .1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>:focus 비교</h1>
+      <form>
+        <h2>:focus</h2>
+        <input type="text" value="focus">
+        <input type="checkbox">
+        <button type="button">button</button>
+        <a href="#">a tag</a>
+        <p>p tag</p>
+      </form>
+
+      <form class="focus-visible">
+        <h2>:focus-visible</h2>
+        <input type="text" value="focus">
+        <input type="checkbox">
+        <button type="button">button</button>
+        <a href="#">a tag</a>
+        <p>p tag</p>
+      </form>
+
+      <form action="" class="focus-within">
+        <h2>:focus-within</h2>
+        <input type="text" value="focus">
+        <input type="checkbox">
+        <button type="button">button</button>
+        <a href="#">a tag</a>
+        <p>p tag</p>
+      </form>
+    </div>
+  </body>
+</html>
