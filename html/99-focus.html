@@ -51,6 +51,10 @@
         background-color: #6295D9;
         font-size: 100%;
         color: #fff;
+
+        &:active {
+          background-color: #4874ad;
+        }
       }
 
       .wrap {
@@ -59,7 +63,7 @@
       }
 
       .focus-visible {
-        :is(input, button, a):focus-within {
+        :is(input, button, a, p):focus-visible {
           outline: 2px dashed #e99d56;
           outline-offset: 2px;
         }
@@ -81,28 +85,28 @@
       <h1>:focus 비교</h1>
       <form>
         <h2>:focus</h2>
-        <input type="text" value="focus">
+        <input type="text">
         <input type="checkbox">
         <button type="button">button</button>
-        <a href="#">a tag</a>
+        <a href="javascript:void(0)">a tag</a>
         <p>p tag</p>
       </form>
 
       <form class="focus-visible">
         <h2>:focus-visible</h2>
-        <input type="text" value="focus">
+        <input type="text">
         <input type="checkbox">
         <button type="button">button</button>
-        <a href="#">a tag</a>
-        <p>p tag</p>
+        <a href="javascript:void(0)">a tag</a>
+        <p tabindex="0">p tag</p>
       </form>
 
       <form action="" class="focus-within">
         <h2>:focus-within</h2>
-        <input type="text" value="focus">
+        <input type="text">
         <input type="checkbox">
         <button type="button">button</button>
-        <a href="#">a tag</a>
+        <a href="javascript:void(0)">a tag</a>
         <p>p tag</p>
       </form>
     </div>
